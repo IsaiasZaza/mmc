@@ -31,7 +31,7 @@ Um aplicativo móvel moderno para cálculo de Índice de Massa Corporal (IMC), c
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/IsaiasZaza/react-native-imc-calculator.git
+git clone https://github.com/IsaiasZaza/mmc.git
 cd react-native-imc-calculator
 ```
 

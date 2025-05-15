@@ -1,102 +1,116 @@
+# 📱 Calculadora de IMC - React Native
 
-# 📱 Calculadora de IMC (Índice de Massa Corporal)
+![GitHub](https://img.shields.io/github/license/seu-usuario/react-native-imc-calculator)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue)
 
-Aplicativo mobile criado com **React Native** para calcular o **IMC (Índice de Massa Corporal)** com base no **peso (kg)** e **altura (m)** informados pelo usuário. O app oferece uma interface moderna com **tema escuro**, validação de dados e classificação de acordo com a tabela da OMS.
+Um aplicativo móvel moderno para cálculo de Índice de Massa Corporal (IMC), com interface intuitiva e feedback visual imediato.
 
----
-
-### Funcionalidades principais
-
-- Inserção de **peso** e **altura** em campos numéricos.
-- Cálculo do IMC com exibição da **classificação de saúde**.
-- Validação de campos vazios ou inválidos (números negativos, letras etc).
-- Botão para **limpar os campos** e reiniciar a calculadora.
-- Interface com **tema escuro** (dark mode) e responsiva.
+<p align="center">
+  <img src="screenshot.png" width="300" alt="App Screenshot">
+</p>
 
 ---
 
-### Classificações de IMC utilizadas
+## ✨ Funcionalidades
 
-| IMC (kg/m²)        | Classificação         |
-|--------------------|-----------------------|
-| Menor que 18.5     | Abaixo do peso        |
-| 18.5 a 24.9        | Peso normal           |
-| 25.0 a 29.9        | Sobrepeso             |
-| 30.0 a 34.9        | Obesidade Grau I      |
-| 35.0 a 39.9        | Obesidade Grau II     |
-| 40.0 ou mais       | Obesidade Grau III    |
-
----
-
-### Explicação das Funções
-
-#### `calcularIMC`
-Calcula o IMC com base nos valores de peso e altura inseridos:
-```js
-const imc = peso / (altura * altura)
-```
-- **Valida os campos** antes de calcular (ex: se estão preenchidos e se são números maiores que zero).
-- Usa `parseFloat` para converter valores de string para número (aceita vírgula).
-- Classifica o IMC com base na tabela da OMS.
-- Atualiza os estados `resultado` e `classificacao` com o valor e sua respectiva faixa.
-
-#### `limparCampos`
-Limpa os campos de entrada e resultado:
-```js
-setPeso('');
-setAltura('');
-setResultado(null);
-setClassificacao('');
-```
-Permite ao usuário reiniciar o processo com facilidade.
-
-#### Hooks utilizados:
-- `useState`: usado para controlar os estados de:
-  - `peso`: peso digitado pelo usuário.
-  - `altura`: altura digitada pelo usuário.
-  - `resultado`: valor final do IMC.
-  - `classificacao`: texto com a classificação.
+- Cálculo instantâneo do IMC
+- Classificação automática com cores diferentes para cada categoria
+- Validação em tempo real dos campos de entrada
+- Design responsivo e adaptável a diferentes tamanhos de tela
+- Interface moderna com animações e feedback tátil
+- Suporte a números com vírgula ou ponto decimal
+- Botão para limpar todos os campos
 
 ---
 
-### Estilização
+## 🛠️ Tecnologias Utilizadas
 
-Utiliza `StyleSheet` para:
-- Estilizar os campos de entrada, botões e textos.
-- Aplicar um **tema escuro** com cores mais suaves aos olhos (`#121212`, `#333`, etc).
-- Garantir responsividade com paddings e margens bem definidas.
+- [React Native](https://reactnative.dev/)
+- JavaScript (ES6+)
+- React Hooks (`useState`)
+- Styled Components com `StyleSheet`
+- Compatibilidade cross-platform (Android/iOS)
 
 ---
 
-### Como executar
+## 🚀 Instalação e Execução
 
-1. Clone o repositório:
+1. **Clone o repositório:**
+
 ```bash
-git clone https://github.com/seuusuario/imc-calculator.git
+git clone https://github.com/IsaiasZaza/react-native-imc-calculator.git
+cd react-native-imc-calculator
 ```
 
-2. Acesse o diretório:
-```bash
-cd imc-calculator
-```
+2. **Instale as dependências:**
 
-3. Instale as dependências:
 ```bash
 npm install
 ```
 
-4. Execute o app (emulador ou dispositivo):
+3. **Inicie o projeto:**
+
 ```bash
-npx react-native run-android
-# ou
-npx react-native run-ios
+npm start
 ```
+
+> Certifique-se de ter o ambiente React Native configurado corretamente. Veja: [React Native CLI Quickstart](https://reactnative.dev/docs/environment-setup)
 
 ---
 
-### Tecnologias Utilizadas
+## 📸 Captura de Tela
 
-- [React Native](https://reactnative.dev/)
-- JavaScript
-- Hooks (`useState`)
-- StyleSheet
+<p align="center">
+  <img src="screenshot.png" width="300" alt="App Screenshot">
+</p>
+
+## 🔍 Explicação do Código
+
+O aplicativo é uma calculadora de IMC (Índice de Massa Corporal) construída com **React Native**, utilizando `useState` para manipular os estados da aplicação e `StyleSheet` para o estilo.
+
+### Principais componentes:
+
+- **`parseNumber`**: Converte o texto digitado para número, aceitando tanto vírgula quanto ponto decimal.
+- **`classifyIMC`**: Retorna a classificação do IMC com base no valor calculado, junto com uma cor associada à categoria.
+
+### Estado gerenciado por `useState`:
+
+- `peso`, `altura`: Entradas fornecidas pelo usuário.
+- `imc`: Objeto com o valor calculado e sua classificação.
+- `erroPeso`, `erroAltura`: Mensagens de erro mostradas abaixo dos campos.
+
+### Validação (`validar`):
+
+Verifica se os campos foram preenchidos corretamente e se os valores são válidos (números positivos).
+
+### Cálculo (`calcular`):
+
+Após validação, calcula o IMC usando a fórmula:
+
+```js
+IMC = peso / (altura * altura)
+```
+
+Armazena o resultado com uma classificação, como "Peso normal" ou "Obesidade grau I".
+
+### Limpar (`limpar`):
+
+Reseta todos os campos e mensagens de erro, além de limpar o resultado.
+
+### Estilização:
+
+- Utiliza `StyleSheet` do React Native com suporte a sombra no iOS e elevação no Android.
+- Usa cores diferentes para indicar a classificação do IMC (ex: verde para "Peso normal", vermelho para "Obesidade").
+
+### Layout:
+
+- `KeyboardAvoidingView`: Garante que os campos não fiquem escondidos ao abrir o teclado.
+- `ScrollView`: Permite rolagem em telas menores.
+- `SafeAreaView`: Garante segurança em dispositivos com notch.
+
+---
+
+## 🙋‍♂️ Autor
+
+Feito com 💙 por **Isaías Gonçalves de Azevedo**  
+🔗 [github.com/IsaiasZaza](https://github.com/IsaiasZaza)

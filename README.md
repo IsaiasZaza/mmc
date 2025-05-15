@@ -1,7 +1,6 @@
 # 📱 Calculadora de IMC - React Native
 
-![GitHub](https://img.shields.io/github/license/seu-usuario/react-native-imc-calculator)
-![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue)
+![GitHub]([https://img.shields.io/github/license/seu-usuario/react-native-imc-calculator](https://github.com/IsaiasZaza/mmc.git))
 
 Um aplicativo móvel moderno para cálculo de Índice de Massa Corporal (IMC), com interface intuitiva e feedback visual imediato.
 

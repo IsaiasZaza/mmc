@@ -54,7 +54,7 @@ npm start
 
 ## 📸 Captura de Tela
 
-![Screenshot_31](https://github.com/user-attachments/assets/bbf1c10c-9c8e-46de-93c3-706d4b372e38)
+![Screenshot_1747333281](https://github.com/user-attachments/assets/aaa712f6-edc4-440c-ae80-507986b62da5)
 
 
 ## 🔍 Explicação do Código

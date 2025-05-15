@@ -60,9 +60,8 @@ npm start
 
 ## 📸 Captura de Tela
 
-<p align="center">
-  <img src="screenshot.png" width="300" alt="App Screenshot">
-</p>
+![Screenshot_31](https://github.com/user-attachments/assets/bbf1c10c-9c8e-46de-93c3-706d4b372e38)
+
 
 ## 🔍 Explicação do Código
 

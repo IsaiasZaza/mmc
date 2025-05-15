@@ -5,12 +5,6 @@
 
 Um aplicativo móvel moderno para cálculo de Índice de Massa Corporal (IMC), com interface intuitiva e feedback visual imediato.
 
-<p align="center">
-  <img src="screenshot.png" width="300" alt="App Screenshot">
-</p>
-
----
-
 ## ✨ Funcionalidades
 
 - Cálculo instantâneo do IMC
